@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mechanism-lab"
+version = "1.0.0"
+description = "Four-bar linkage position, velocity, acceleration, and coupler-curve analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "Pillow>=10"]
+authors = [{name = "Mahin Patel"}]
+license = {text = "MIT"}
+
+[project.scripts]
+mechanism-lab = "mechanism_lab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mechanism_lab*"]
